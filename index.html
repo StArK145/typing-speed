@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Typing Speed Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Professional Typing Test</h1>
+        <p class="subtitle">Improve your typing speed and accuracy</p>
+        
+        <div class="difficulty-selector">
+            <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+            <button class="difficulty-btn active" data-difficulty="medium">Medium</button>
+            <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+        
+        <div class="text-display" id="text-display"></div>
+        
+        <div class="input-area">
+            <textarea id="user-input" placeholder="Click here and start typing when ready..."></textarea>
+        </div>
+        
+        <div class="stats-container">
+            <div class="stat-card wpm">
+                <div class="stat-title">SPEED</div>
+                <div class="stat-value" id="wpm">0</div>
+                <div class="stat-unit">WPM</div>
+            </div>
+            <div class="stat-card accuracy">
+                <div class="stat-title">ACCURACY</div>
+                <div class="stat-value" id="accuracy">100</div>
+                <div class="stat-unit">%</div>
+            </div>
+            <div class="stat-card time">
+                <div class="stat-title">TIME</div>
+                <div class="stat-value" id="time">0</div>
+                <div class="stat-unit">SEC</div>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button class="primary-btn" id="restart-btn">Restart Test</button>
+            <button class="secondary-btn" id="new-text-btn">New Text</button>
+        </div>
+    </div>
+    
+    <div class="modal" id="results-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <div class="result-icon">🏆</div>
+            <h2 class="result-title">Test Complete!</h2>
+            <div class="result-stats">
+                <div>
+                    <div class="stat-title">SPEED</div>
+                    <div class="stat-value" id="result-wpm">0</div>
+                    <div class="stat-unit">WPM</div>
+                </div>
+                <div>
+                    <div class="stat-title">ACCURACY</div>
+                    <div class="stat-value" id="result-accuracy">100</div>
+                    <div class="stat-unit">%</div>
+                </div>
+            </div>
+            <div id="grade-display" class="grade grade-a">Excellent!</div>
+            <button class="primary-btn" id="try-again-btn" style="margin-top: 1rem;">Try Again</button>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
